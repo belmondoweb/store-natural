@@ -1,0 +1,14 @@
+<div class="home">
+        <div class="row justify-content-center now">      
+<h4 *ngIf="discount">
+        Only now, on {{currentDate | date:'EEE, MMMM'}} - 
+        {{discount}}% discount extra on all products!
+</h4>
+
+</div> 
+<ul>
+    <li *ngFor="let c of categories">{{c.categoryID}} - {{c.categoryName}}</li>
+</ul>
+
+
+</div>

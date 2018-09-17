@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+        <div class="col-md-10 table-scrolling">   
+  <h1>
+        About Us
+       </h1>
+   <div class="list-group">
+
+     <p *ngIf="!responseParam.data">before response is back from the server</p>
+     
+     <div *ngIf="responseParam.data">
+       <div class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let x of responseParam.data">
+        <!-- <p>First name: {{x.first_name}}</p>
+        <p>Last name : {{x.last_name}}</p> -->
+        <p>Full name : {{x.first_name + " "+ x.last_name}}</p>
+      <img class="img-fluid rounded" style="width:170px;" [src]="x.avatar"/>
+      <div class="d-flex p-2" style="float: right;"> Flex containers and items are able to be modified further with additional flex properties.<br>div class="row justify-content-center"<br>div list-group-item list-group-item-action flex-column align-items-start </div>
+       </div>
+    </div>
+    
+       </div>
+       </div>
